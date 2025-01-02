@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+    </head>
+    <body>
+        <h1>learn full stack</h1>
+        <button onclick="alert('Button Clicked!')">Click Me</button>
+        <button type = "button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+        <p id = "demo">hello</p>
+        <p id = "demo1">HI I AM SOFTWARE DEVELOPER</p>
+        <p id = "demo2" style="display: none;">Hello how are you</p>
+        <button onclick="document.getElementById('myimage').src='Bulbon.png'">Turn on the light</button>
+        <img id = "myimage" src = 'Bulboff.png' style = "width:100px">
+        <button onclick="document.getElementById('myimage').src='Bulboff.png'">Turn off the light</button>
+        <p id = "demo3"></p>
+        <br>
+        <br><br><br>
+        <button onclick="document.getElementById('demo1').style.fontSize='35px'">Click Me!</button>
+        <button onclick="alert('Display blocked')">Click Meeeeeeeee</button>
+        <br>
+        <button onclick="document.getElementById('demo2').style.display = 'block' ">Click Me</button>
+        <br>
+        <button onclick="document.getElementById('demo').innerHTML = 'hello javascript'">Click ME to display</button>
+        <button onclick="window.alert(5+5)">Click</button>
+        <p id = "demo4"></p>
+        <p id = "demo5"></p>
+        <div id = "demo6">Spread Operator</div>
+        <br>
+        <div id = "demo7"></div>
+        <br>
+        <div id = "demo8"></div>
+        <br>
+        <div id = "demo9"></div>
+        <br>
+        <div id = "demo10"></div>
+        <script>
+            document.body.innerHTML += "<p>Welcome to full-stack learning!</p>";
+            console.log("Heloo ")
+            // object destructuring
+            const person = {
+                firstName : "priya",
+                lastName : "nka",
+                age : 21 ,
+                character : "sweet"
+            };
+            //array destructuring
+            let {firstName , character} = person;
+            // `${firstName}`;
+            document.getElementById("demo4").innerHTML = `${firstName}` +" is a "+ character +" girl" ;
+            const fruits = ["banana","orange","apple","grape"];
+            let  [fruit1,fruit2] = fruits;
+            document.getElementById("demo5").innerHTML = `${fruit1}`;
+            // spread operator
+            const m1 = ["jan","feb","mar"];
+            const m2 = ["apr","may","jun"];
+            const m3 = ["jul","aug","sep"];
+            const m4 = ["oct","nov","dec"];
+            let year = [...m1,...m2,...m3,...m4];
+            document.getElementById("demo6").innerHTML = year;
+            //for of loop
+            const cars = ["bmw","volvo","suzuki","rolls royce"];
+            let text = "";
+            for(let x of cars){
+                text += x +"<br>";
+            }
+            document.getElementById("demo7").innerHTML = text;
+            //  for in loop
+            const person1 = {firstName : "Priya" , lastName :"nka" , age : 21 , character :"sweet"};
+            let text1 = "";
+            for(let x in person1){
+                text1 += person1[x]+" ";
+            }
+            document.getElementById("demo8").innerHTML = text1;
+            //  for array loop
+            const arr = [45,6,9,34,54,32];
+            let text2 = "";
+            for(let x in arr){
+                text2 += arr[x]+" ";
+            }
+            document.getElementById("demo9").innerHTML = text2;
+            //  for each loop
+            const num = [5,10,15,20,25,30];
+            let text3 = "";
+            num.forEach(myFunction);
+            document.getElementById("demo10").innerHTML = text3;
+            function myFunction(value,index,array){
+                text3 += value+" ";
+            }
+        </script>
+    </body>
+</html>
